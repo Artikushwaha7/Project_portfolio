@@ -1,0 +1,397 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow-y: auto;
+    padding-bottom: 110px; /* space for music player */
+}
+
+.music-player {
+    background-color: #181818;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.nav-option.active,
+.nav-option:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: #1DB954;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: inherit;
+}
+
+.library {
+    background-color: #0e0e0e;
+    border-radius: 1rem;
+    flex: 1;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.lib-option i {
+    font-size: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    opacity: 0.7;
+}
+
+.icons i:first-child {
+    margin-right: 1rem;
+}
+
+.box {
+    background-color: rgb(23, 22, 22);
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+    color: #121212;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.badge:hover {
+    background: #1DB954;
+    color: #fff;
+}
+
+.dark-badge {
+    background-color: #000;
+    color: #fff;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.card:hover {
+    background: #2a2a2a;
+}
+
+.card-img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.card-info {
+    font-size: 0.85rem;
+    color: #b3b3b3;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.line {
+    border-top: 1px solid #232323;
+    margin: 2rem 0 0 0;
+}
+
+.player-left, .player-center, .player-right {
+    display: flex;
+    align-items: center;
+}
+
+.player-left {
+    flex: 1;
+}
+
+.player-center {
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.player-cover {
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    margin-right: 1rem;
+}
+
+.player-song-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-song-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.player-song-artist {
+    font-size: 0.85rem;
+    color: #b3b3b3;
+}
+
+.player-controls i {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.player-controls i:hover {
+    color: #1DB954;
+    opacity: 1;
+}
+
+.play-btn {
+    font-size: 2rem;
+    color: #fff;
+    opacity: 1;
+}
+
+.player-progress {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+.player-progress .current-time,
+.player-progress .total-time {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+    margin: 0 0.5rem;
+}
+
+.progress-bar {
+    width: 300px;
+    accent-color: #1db954;
+}
+
+.volume-bar {
+    width: 100px;
+    margin-left: 0.5rem;
+    accent-color: #1db954;
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 200px;
+        min-width: 120px;
+    }
+    .main-content {
+        padding-left: 0.5rem;
+    }
+    .cards-container {
+        gap: 1rem;
+    }
+    .card {
+        width: 120px;
+        padding: 0.5rem;
+    }
+    .card-img {
+        height: 100px;
+    }
+    .music-player {
+        padding: 0 0.5rem;
+    }
+    .progress-bar {
+        width: 120px;
+    }
+    .volume-bar {
+        width: 60px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+        padding: 0;
+    }
+    .sidebar {
+        width: 100vw;
+        min-width: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    .main-content {
+        border-radius: 0;
+        padding: 0 0.5rem 110px 0.5rem;
+    }
+    .music-player {
+        height: 120px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .player-left, .player-center, .player-right {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    .player-right {
+        justify-content: center;
+    }
+}
